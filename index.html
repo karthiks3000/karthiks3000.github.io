@@ -1,1363 +1,1111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <title>Karthik Subramanian - Developer | Designer | Artist</title>
+    <meta http-equiv="origin-trial" content="AqMixl1ARhc0sjViJvLf27A7IYKfLAi0V3sTbkLO5/PjCWcwX9M405Xmi4KWNJfZBWlr1ueL5A06O+fCjjg+hQgAAAB2eyJvcmlnaW4iOiJodHRwczovL21haW4uZDEwcmdlMG55M203c3YuYW1wbGlmeWFwcC5jb206NDQzIiwiZmVhdHVyZSI6IkFJUHJvbXB0QVBJTXVsdGltb2RhbElucHV0IiwiZXhwaXJ5IjoxNzc0MzEwNDAwfQ==">
+    <!-- Dark theme meta tags -->
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#111827">
     
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-   
-   
+    <!-- Mobile-specific meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="">
+    
+    <!-- Preconnect to external domains for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    
+    <title></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with Dark Theme Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    },
+                    colors: {
+                        gray: {
+                            900: '#111827',
+                            800: '#1f2937',
+                            700: '#374151',
+                            400: '#9ca3af',
+                            300: '#d1d5db',
+                            100: '#f3f4f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Dark Theme Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Noscript fallback styles -->
+    <noscript>
+        <style>
+            .opacity-0 { opacity: 1 !important; }
+        </style>
+    </noscript>
 </head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Karthik Subramanian</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#art">My Art</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Testimonials</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="/Karthik Subramanian.pdf" download>Resume</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<body class="font-inter bg-gray-900 text-gray-100 dark">
+    <!-- Skip navigation links for keyboard users -->
+    <nav aria-label="Skip navigation links" class="sr-only focus-within:not-sr-only focus-within:absolute focus-within:top-4 focus-within:left-4 focus-within:z-50">
+        <div class="flex flex-col space-y-2 bg-gray-900 p-4 rounded-lg border border-blue-400">
+            <a href="#main-content" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to main content
+            </a>
+            <a href="#skills" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to Skills
+            </a>
+            <a href="#experience" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to Experience
+            </a>
+            <a href="#projects" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to Projects
+            </a>
+            <a href="#background" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to Background
+            </a>
+            <a href="#contact" class="bg-blue-400 text-gray-900 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900">
+                Skip to Contact
+            </a>
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div id="intro" class="intro-lead-in">Find out what you like doing best, and get someone to pay you for it.</div>
-                <a href="#skills" class="page-scroll btn btn-xl">Tell Me More</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Services Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Skills</h2>
-                    <h3 class="section-subheading text-muted">My Bread and Butter</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-xs-12 col-md-4" >
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Programming Languages</h4>
-                    <p class="text-muted">C# & VB .Net, Python, VB, PL/SQL</Br>VBScript, JavaScript & TypeScript</p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-database fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Database</h4>
-                    <p class="text-muted">SQL Server 2005/2008 R2 </Br>With a pinch of Postgresql & MYSQL </p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Web-Technologies</h4>
-                    <p class="text-muted">HTML 5, CSS 3, AngularJS, Angular 2/4/5</br> Django, KnockOutJS & ASP.NET</p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Messaging</h4>
-                    <p class="text-muted">Rabbit MQ, REST & SOAP Services </br>JSON & XML</p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <span class="fa-stack fa-4x">
-                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                      <i class="fa fa-cog fa-spin icon-stack-2x fa-inverse"></i>
-                      <i class="fa fa-cog fa-counter-spin icon-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Frameworks</h4>
-                    <p class="text-muted">Entity Framework 4, MVC, MVVM</br>PetaPoco & NancyFX</p>
-                </div>
-                <div class="col-xs-12 col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Reporting</h4>
-                    <p class="text-muted">SQL Server Reporting Services <br> Crystal Reports</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <blockquote>
-                        <h3 class="section-subheading text-muted">Choose a job you love, and you will never have to work a day in your life
-                         <footer>Confucius</footer>
-                        </h3>
-                       
-                    </blockquote>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">                    
-                    <blockquote>
-                        <h2 class="section-subheading text-muted">Professional Projects</h2>                        
-                    </blockquote>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/Litpro_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Literacy Pro</h4>
-                        <p class="text-muted">Sr. Software Engineer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/Word_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>W.O.R.D.</h4>
-                        <p class="text-muted">Sr. Software Engineer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/Ooka_Island_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Ooka Island</h4>
-                        <p class="text-muted">Sr. Software Engineer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/copyright.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Content Protection 2.0</h4>
-                        <p class="text-muted">Technical Lead</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/angular.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>PTSX Web</h4>
-                        <p class="text-muted">Technical Lead</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/PTS_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Program Tracking System</h4>
-                        <p class="text-muted">Technical Lead</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/Media_Monitor_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Media Monitor</h4>
-                        <p class="text-muted">Sr. Software Engineer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/BugNet_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Bugnet Tracking System</h4>
-                        <p class="text-muted">Software Engineer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/Anti_Piracy_logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Anti-Piracy Web Crawler</h4>
-                        <p class="text-muted">Software Intern</p>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">                    
-                    <blockquote>
-                        <h2 class="section-subheading text-muted">Personal Projects</h2>                        
-                    </blockquote>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fuzzy-mapper.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Fuzzy Mapper</h4>
-                        <p class="text-muted">Windows Forms Application</p>
-                    </div>
-                </div>      
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/python-logo.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>File Comparison</h4>
-                        <p class="text-muted">Python Script</p>
-                    </div>
-                </div>      
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/angular.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Content LookUp</h4>
-                        <p class="text-muted">Angular Application</p>
-                    </div>
-                </div>         
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted">Don't wait for the storm to pass, instead learn to dance in the rain..</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/internship.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2007-2011</h4>
-                                    <h5 class="subheading">Humble Beginnings</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">A Summer Workshop with GridBots & an Internship @ L&T Infotech where I got hooked onto programming and started developing web crawlers & content management systems.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/graduate.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>June 2011</h4>
-                                    <h5 class="subheading">A Bachelor in Information Technology!</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Graduated from Mumbai University with a Bachelors in Information Technology and accepted a job at L&T Infotech</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2011-2012</h4>
-                                    <h5 class="subheading"><em>"Walking on water and developing software from a specification are easy if both are frozen”</em></h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Learnt valuable lessons in requirement gathering and development while developing and maintaining a web application involving a dozen stakeholders and hundreds of users.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/uptheladder.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2012-2014</h4>
-                                    <h5 class="subheading">Training, Development & Management</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Certified in Web Applications Development with Microsoft .NET Framework 4 (70-515 TS) <br> And Designing and Developing Web Applications Using Microsoft .NET Framework 4 (70-519 PRO).
-                                    <br>Won the company spot award for steering the project successfully during a critical release.
-                                    <br>Took on the role of the Team Lead in 2013 and was responsible for delivery & QA compliance as per CMMI SVC 1.3.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/mickey.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>January 2014</h4>
-                                    <h5 class="subheading">The American Dream</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Took on the role of Onsite Technical Lead for L&T Infotech @ Viacom Inc in Times Square New York. 
-                                    <br>Role includes requirement gathering & analysis, solution architecting, ensuring end to end delivery of all tasks and creating design documents. </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/book.png" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>April 2018</h4>
-                                    <h5 class="subheading">So many books, so little time</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Accepted the role of Sr. Software Engineer with Randstad at Scholastic Inc.
-                                    <br>Had the priviledge of working on revolutionary educational products that provide educators the tools they need to help meet their critical reading goals.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>And
-                                    <br>the story
-                                    <br>goes on!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Art Section -->
-    <section id="art">
-         <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">My Art</h2>
-                    <h3 class="section-subheading text-muted">Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep..</h3>
-                </div>
-        </div>
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="8"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="9"></li>
-          </ol>
-        
-          <!-- Wrapper for slides -->
-          <div class="col-xs-8 col-sm-8 col-sm-offset-2">
-            	 <div id='image-carousel' class="carousel slide" data-ride='carousel'>
-                    <!-- Indicators -->
-                    	<ol class="carousel-indicators">
-                    		<li data-target='#image-carousel' data-slide-to="0" class="active"></li>
-                    		<li data-target='#image-carousel' data-slide-to="1"></li>
-                    		<li data-target='#image-carousel' data-slide-to="2"></li>
-                    		<li data-target='#image-carousel' data-slide-to="3"></li>
-                    		<li data-target='#image-carousel' data-slide-to="4"></li>
-                    		<li data-target='#image-carousel' data-slide-to="5"></li>
-                    		<li data-target='#image-carousel' data-slide-to="6"></li>
-                    		<li data-target='#image-carousel' data-slide-to="7"></li>
-                    		<li data-target='#image-carousel' data-slide-to="8"></li>
-                    		<li data-target='#image-carousel' data-slide-to="9"></li>
-                    		
-                    	</ol>
-                    	<!-- Wrapper for Images -->
-                    	<div class="carousel-inner" role="listbox">
-                    		<div class="item active">
-                    			<img src="img/Art/art1.jpg" alt="">
-                    			<div class="carousel-caption"></div>
-                    		</div>
-
-                    		<div class="item">
-                    			<img src="img/Art/art2.jpg" alt="">
-                    			<div class="carousel-caption"></div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art3.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art4.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art5.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art6.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art7.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art8.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    		<div class="item">
-                    			<img src="img/Art/art9.jpg" alt="">
-                    			<div class="carousel-caption">
-                    			</div>
-                    		</div>
-                    	</div>
-
-                    	<!-- Left and right controls -->
-						    <a class="left carousel-control" href="#image-carousel" role="button" data-slide="prev">
-						      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						      <span class="sr-only">Previous</span>
-						    </a>
-
-						    <a class="right carousel-control" href="#image-carousel" role="button" data-slide="next">
-						      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						      <span class="sr-only">Next</span>
-						    </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading"></h2>
-                </div>
-        </div>
-        
-    </section>
-    
-   
-    
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Testimonials</h2>
-                    <h3 class="section-subheading text-muted">A few kind words from team mates.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/soumya.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Soumya Shankar</h4>
-                        <h6>Project Manager - Search Marketing, SMG Convonix</h6>
-                        <p class="text-muted">I have worked with Karthik on various collaborative projects and have learnt quite a few things from him. He is not only technically very strong in programming, but also has a knack for picking up new languages quickly. Apart from being a good team player, he also displays commendable skills at guiding team members. As an individual he exhibits a good temperament backed up by strong communication skills.</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://www.facebook.com/soumya.shankar?fref=ts"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/santosh.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Santosh Pai</h4>
-                        <h6>Onsite Lead, L&T Infotech</h6>
-                        <p class="text-muted">I have worked with Karthik for a year and a half. He is apt at prioritizing tasks and completing deliverables well before time. He has time and again crafted ingenious solutions for complex problems demonstrating organizational and analytical skills of the highest order. He is unfazed by chaotic situations and ambiguity. Even when we were under pressure to deliver critical tasks with very little time, he was at his best.</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://www.facebook.com/santosh.s.pai"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="https://www.linkedin.com/in/santoshspai"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/rashmi.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Rashmi Parulekar</h4>
-                        <h6>QA Lead, AIG</h6>
-                        <p class="text-muted">Karthik is a capable and tireless Lead with exceptional client relationship skills built on trust. We worked together to serve a common client as Developer & QA. He always showed a strong diversity in his technical skills & did not shy away from researching solutions to meet new challenges. In addition to the respect of his customers, he is well respected by both his leadership & those he manages. Finally, I most admire his boundless energy & determination!!</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://www.facebook.com/rashmi.bhosale.5?fref=ts"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="https://www.linkedin.com/in/rashmi-parulekar-60b674b2?trk=eml_inv_status_profile"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                <blockquote>
-                  <p class="large text-muted">Software innovation, like almost every other kind of innovation, requires the ability to collaborate and share ideas with other people, and to sit down and talk with customers and get their feedback and understand their needs.</p>
-                  <footer>Bill Gates</footer>
-                </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
-  
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact</h2>
-                    <h3 class="section-subheading text-muted">Feel free to reach out to me.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="copyright">Copyright &copy; KarthikSubramanian.net | <a href="http://startbootstrap.com">Start Bootstrap</a></span>
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+        <!-- Hero Section (serves as site header) -->
+        <header>
+            <section id="hero" class="relative min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center" role="banner" aria-labelledby="hero-heading" aria-describedby="hero-description">
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content py-8 sm:py-12">
+                <!-- Profile Photo -->
+                <div class="mb-6 sm:mb-8">
+                    <img src="assets/profile.jpg" 
+                         alt="" 
+                         class="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-2 border-gray-700 shadow-2xl mx-auto hover-scale transition-transform duration-300 object-cover image-loading"
+                         loading="eager"
+                         width="160"
+                         height="160"
+                         onload="this.classList.remove('image-loading'); this.classList.add('image-loaded');">
                 </div>
                 
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://github.com/karthiks3000"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="https://in.linkedin.com/in/karthik-subramanian-7381b67b"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li><a href="https://stackoverflow.com/users/7685891/karthiks3000"><i class="fa fa-stack-overflow"></i></a></li>
-                    </ul>
+                <!-- Name -->
+                <h1 id="hero-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-3 sm:mb-4">
+                    <!-- Dynamic name will be populated by JavaScript -->
+                </h1>
+                
+                <!-- Professional Title -->
+                <p class="text-lg sm:text-xl lg:text-2xl font-medium text-blue-400 mb-4 sm:mb-6">
+                    Twin Dad | Software Engineer | <span id="rotating-word" aria-live="polite">Javaphile</span>
+                </p>
+                
+                <!-- Value Proposition -->
+                <blockquote id="hero-description" class="text-base sm:text-lg lg:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2 italic relative">
+                    <span class="relative z-10">"Find out what you like doing best, and get someone to pay you for it."</span>
+                </blockquote>
+                
+                <!-- AI Feature Status (for debugging) -->
+                <div id="ai-status-indicator" class="hidden mt-4 p-3 rounded-lg border text-sm">
+                    <span id="ai-status-text">Checking AI capabilities...</span>
                 </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Literacy Pro</h3>
-                            <p class="item-intro text-muted">Sr. Software Engineer - Randstad</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                Literacy Pro is an independent reading experience that allows students to intuitively connect to the books they want to read. It also includes assessment features to allow students to get book recommendations based off of their reading level. In addition, there is a rich data feedback loop for students and educators to gauge progress towards reading goals.
-                                </br>
-                                Educators and administrators can also use Lit Pro as a tool to gather data about their students’ reading experiences to inform their instructional choices. Various reports are populated to help teachers understand reading choices at both an individual student and class level. Additionally, administrators can view rolled up statistics across a class, teacher, school or district.
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Design &amp; Develop reusable components in <Strong>AngularJS and ngx-charts</Strong>, that are responsive across all mobile devices </li>
-                                <li>Develop highly scalable and optimized REST APIs in Java using the <Strong>Spring Boot Framework &amp; MySQL </Strong> database</li>
-                                <li>Implement a batch assignment feature to enable teachers to assign Scholastic Reading Measure and Scholastic Reading Readiness tests to multiple students at once</li>
-                                <li>Design &amp; Develop a CSV export feature that allows teachers to extract crucial information related to student performance from the Literacy Pro reporting dashboard </li>
-                                <li>Implement an event based messaging pipeline to deliver relevant information to the cross product dashboard from Literacy Pro using <Strong>Apache Kafka</Strong> </li>
-                                <li>Work on reducing the tech-debt of the project by refactoring the existing code base to be more reusable and durable </li>
-                                <li>Resolve key issues related to synchronization of roster data for <Strong>CLEVER</Strong> users </li>
-                                <li>For the 2019 back to school, enhance the LiteracyPro front-end and back-end code to support year over year transition. This includes integration changes with Scholastic Digital Manager and app specific changes </li>
-                                <li>Analyze business use-cases across all 3 products and assist in the design and development of a cross product dashboard to enable teachers to view a student’s overall progress across all of Scholastic Literacy Products </li>
-                                <li>Enable teachers to create assignments for students in <Strong>Google Classrooms</Strong> right from the Literacy Pro application </li>
-                                <li>Conduct code-reviews &amp; provide guidance to junior developers with their tasks. Assist in the cross-functional training of front-end &amp; back-end engineers with the aim of making them full-stack </li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong> HTML5, CSS3, Bootstrap 4, JSON, AngularJS, Java, Spring Boot 2.0, MySQL, AWS S3, OpenShift, AWS RDS, Apache Kafka 
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Apr 2018 - Till Date</li>
-                                <li><Strong>Client:</Strong> Scholastic Inc.</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Words Open Reading Doors</h3>
-                            <p class="item-intro text-muted">Sr. Software Engineer - Randstad</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                W.O.R.D. is an interactive vocabulary program. The goal of the program is that students experience repeated exposures to core words in multiple contexts, thus bringing to consciousness the generative word strategies that are implicit in making meaning when reading. As student’s progress through the game, they also develop a vocabulary of terms to inform their thinking about words, word families, and word meanings. Understanding these terms helps broaden student’s knowledge of how words work.
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Design &amp; Develop reusable components in <Strong>Angular 5 and ngx-charts</Strong>, that can be used across both game dashboards and are responsive across all mobile devices</li>
-                                <li>Develop highly scalable and optimized REST APIs in python using the <Strong>Django Rest Framework, Redis cache &amp; ElasticSearch </Strong> </li>
-                                <li>Develop a custom Django middleware backend for sending emails leveraging the organizations <Strong>Adobe Campaign Manager</Strong> implementation  </li>
-                                <li>Develop custom python scripts to generate random game play data in bulk for both products to help test for scalability &amp; performance and cover edge cases </li>
-                                <li>Design &amp; Develop the CSR portals for both products that would allow customer service representatives to update a student’s game play progress based on requests received from teachers or school administrators</li> 
-                                <li>Establish a reusable query manager class that would allow clients to easily and quickly create custom <Strong>ElasticSearch</Strong> queries by leveraging a suite of helper methods  </li>
-                                <li>Implement a robust authentication protocol using <Strong>JWT tokens</Strong> to verify the user’s identity and access level obtained by integrating with Scholastic Digital Manager </li>
-                                <li>Strategically combine related application functionality under “feature modules” and implement lazy loading to improve application load time </li>
-                                <li>Design the APIs to query both MySQL and ElasticSearch for data and return a consolidated result set </li>
-                                <li>Provide crucial support in the integration of Ooka Island into Scholastic’s suite of games to ensure a smooth go-live of the game as per schedule  </li>
-                                <li>Create <Strong>custom angular pipes</Strong> to transform data returned by backend API’s into desirable formats </li>
-                                <li>Conduct code-reviews &amp; provide guidance to junior developers with their tasks. Assist in the cross-functional training of front-end &amp; back-end engineers with the aim of making them full-stack </li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong> HTML5, CSS3, Bootstrap 4, JSON, XML, Angular4, Python, Django Rest Framework, Redis, MySQL, AWS S3, OpenShift, AWS RDS, AWS Elasti-Cache, ElasticSearch, Kibana 
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Apr 2018 - Till Date</li>
-                                <li><Strong>Client:</Strong> Scholastic Inc.</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Ooka Island</h3>
-                            <p class="item-intro text-muted">Sr. Software Engineer - Randstad</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                Ooka Island secures the foundational reading skills needed for students in Grades PreK-2, creating automatic, fluent readers with strong comprehension. It transforms teaching foundational reading skills by breaking the process down into thousands of micro-actions—6,695 to be exact. With an instructionally robust methodology and highly adaptive technology, Ooka Island actively personalizes each student’s path toward fluent reading. 
-                                </br>
-                                Built on Dr. Kay MacPhee’s proven, research-based concepts, Ooka Island purposefully leads with securing children's phonemic awareness while teaching phonological skills to ensure reading words becomes as effortless as speaking—so students can focus on comprehension.
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Design &amp; Develop reusable components in <Strong>Angular 5 and ngx-charts</Strong>, that can be used across both game dashboards and are responsive across all mobile devices</li>
-                                <li>Develop highly scalable and optimized REST APIs in python using the <Strong>Django Rest Framework, Redis cache &amp; ElasticSearch </Strong> </li>
-                                <li>Develop a custom Django middleware backend for sending emails leveraging the organizations <Strong>Adobe Campaign Manager</Strong> implementation  </li>
-                                <li>Develop custom python scripts to generate random game play data in bulk for both products to help test for scalability &amp; performance and cover edge cases </li>
-                                <li>Design &amp; Develop the CSR portals for both products that would allow customer service representatives to update a student’s game play progress based on requests received from teachers or school administrators</li> 
-                                <li>Establish a reusable query manager class that would allow clients to easily and quickly create custom <Strong>ElasticSearch</Strong> queries by leveraging a suite of helper methods  </li>
-                                <li>Implement a robust authentication protocol using <Strong>JWT tokens</Strong> to verify the user’s identity and access level obtained by integrating with Scholastic Digital Manager </li>
-                                <li>Strategically combine related application functionality under “feature modules” and implement lazy loading to improve application load time </li>
-                                <li>Design the APIs to query both MySQL and ElasticSearch for data and return a consolidated result set </li>
-                                <li>Provide crucial support in the integration of Ooka Island into Scholastic’s suite of games to ensure a smooth go-live of the game as per schedule  </li>
-                                <li>Create <Strong>custom angular pipes</Strong> to transform data returned by backend API’s into desirable formats </li>
-                                <li>Conduct code-reviews &amp; provide guidance to junior developers with their tasks. Assist in the cross-functional training of front-end &amp; back-end engineers with the aim of making them full-stack </li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong> HTML5, CSS3, Bootstrap 4, JSON, XML, Angular4, Python, Django Rest Framework, Redis, MySQL, AWS S3, OpenShift, AWS RDS, AWS Elasti-Cache, ElasticSearch, Kibana 
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Apr 2018 - Till Date</li>
-                                <li><Strong>Client:</Strong> Scholastic Inc.</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Content Protection 2.0</h3>
-                            <p class="item-intro text-muted">Technical Lead - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                The purpose of the project is to design a solution that can meet the organization’s growing need to identify audio/video content using fingerprinting & watermarking technologies. Other use cases include Usage Tracking, UGC Monetization & Content Identification to enable interactivity. 
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li><strong>Spearheaded</strong> the entire project to completion on schedule &amp; within the estimated budget, exceeding expectations in what was delivered &amp; overcoming all challenges along the way</li>
-                                <li>Architected the entire process workflow spanning 4 different systems &amp; designed highly scalable integration messaging formats that sustained changing business requirements</li>
-                                <li>Successfully mapped all business use cases &amp; pain points into actionable work items ensuring <strong>100% coverage</strong> &amp; an end product that was intuitive, easy to use &amp; a <strong>fully automated workflow</strong> for fingerprint delivery to partners</li>
-                                <li>Designed the <strong>messaging architecture</strong> in RabbitMQ, defining the specific exchanges, queues &amp; routing patterns for each step of the workflow including fail safe procedures using DLX queues &amp; retry capabilities</li>
-                                <li>Designed &amp; developed the dashboard application in <strong>Angular 4</strong> using <strong>PrimeNG</strong> controls in TypeScript, including creating <strong>custom components for advanced filtering &amp; state graph</strong> that are now being used by other angular projects</li>
-                                <li>Designed &amp; developed the database schema in <strong>PostgreSQL</strong> &amp; created the REST APIs in python using the <strong>Django Rest Framework &amp; Redis cache</strong></li>
-                                <li>Implemented a seamless authentication protocol for <strong>Active Directory</strong> authentication using ng2-adal, and Authorization using <strong>Django Tokens</strong></li>
-                                <li>Implemented a scalable <strong>self-hosted .Net API</strong> to generate vendor specific metadata xml&rsquo;s using generic inputs for <strong>YouTube, Vobile &amp; AudibleMagic</strong></li>
-                                <li>Singlehandedly deployed the full stack using <strong>AWS</strong> &ndash; <strong>S3</strong> buckets for static hosting of the UI, <strong>Elastic Beanstalk</strong> instance to host the python API, <strong>RDS</strong> to host the PostgreSQL Database &amp; <strong>ElastiCache</strong> to host the Redis Cache server</li>
-                                <li>Skillfully <strong>collaborated</strong> with multiple stakeholders including end users, other project teams &amp; external vendors to ensure a smooth integration and a quick rollover from the old system to the new one with <strong>no disruption to services</strong></li>
-                                <li>Created an intuitive &amp; scalable <strong>library</strong> that encapsulates the process of subscribing &amp; publishing data to <strong>RabbitMQ</strong>. The library is now being used by multiple projects in the organization</li>
-                                <li>Created design mockups &amp; wireframes using <strong>BalsamiqUI</strong></li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong> HTML5, CSS3, Bootstrap 3.7, JSON, XML, Angular4, PrimeNG 4, Python, Django Rest Framework, Redis, PostgreSQL, pgAdmin4, .Net 4.5, RabbitMQ, Camunda, AWS S3, AWS Elastic Beanstalk, AWS RDS, AWS Elasti-Cache
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong>Jan 2017 - Till Date</li>
-                                <li><Strong>Client:</Strong> Viacom Inc.</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>PTSX Web</h3>
-                            <p class="item-intro text-muted">Technical Lead - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                Develop a web interface to support a legacy WinForm application, providing a complimenting UI to access the programming & scheduling information across hundreds of channels on the go. 
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Designed dynamic &amp; modular views in <strong>AngularJS</strong> that were driven by <strong>JSON</strong> files containing form field information using <strong>schema-form.js &amp; dataTable.js</strong></li>
-                                <li>Implemented <strong>Angular controllers, factories, services &amp; directives</strong> to retrieve data from REST API&rsquo;s &amp; build key functionalities</li>
-                                <li>Developed light-weight, flexible &amp; fast API&rsquo;s using <strong>NancyFX</strong> in .Net to support the application</li>
-                                <li>Conducted daily standup meetings as a part of agile <strong>SCRUM</strong> methodology to track the teams progress and identify &amp; address issues/roadblocks</li>
-                                <li>Meet with end users &amp; key stake holders to map requirements, scope identification, impact analysis and release planning</li>
-                                <li>Guide developers on Query performance tuning and <strong>SQL Optimization</strong></li>
-                                <li>Built <strong>caching protocols</strong> for saving distance data on queries&nbsp;&amp; implemented caching using <strong>Redis</strong></li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong>HTML5, CSS3, Bootstrap 3.7, JSON, AngularJS, JQuery, JavaScript, .Net Web API, NancyFX, SQL Server 2008R2 & Redis                                
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Oct 2016 - Jan 2017</li>
-                                <li><Strong>Client:</Strong> Viacom Inc.</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Program Tracking System</h3>
-                            <p class="item-intro text-muted">Technical Lead - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                The project entails maintenance & enhancement of an existing legacy Win Form application that serves as the primary scheduling application for all domestic channels of the organization. The application holds the metadata of all domestic content owned/acquired & is used schedule content on broadcast channels & across multiplatform partners such as Amazon, Netflix, Hulu, DIRECTV etc. 
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Responsible for end to end development &amp; delivery of the application including production (L3) support, leading a team of 7 offshore developers</li>
-                                <li>Assist brainstorming sessions with the Programming &amp; Scheduling departments to optimize business process workflows</li>
-                                <li>Developed custom automation solutions using <strong>fuzzy mapping algorithms</strong> to help map content originating from multiple applications. The code provides control over the accuracy at which the algorithm operates to allow users to cover maximum number of scenarios</li>
-                                <li>Re-designed the <strong>scheduling</strong> <strong>grid</strong> module to look more like the Microsoft Outlook Calendar allowing users an intuitive &amp; familiar interface to schedule content, leveraging features such as drag-drop, auto-scheduler, parallel views, customized export &amp; quick lookups</li>
-                                <li>Refactored multiple key modules of the application using <strong>Infragistics</strong> Controls such as UltraGrid, UltraSchedule, Excel Exporter, Dock Manager, UltraPanel, UltraEditors &amp; UltraSplitter. Improved the application&rsquo;s look &amp; feel by implementing a custom style using the AppStylelist</li>
-                                <li>Re-engineered certain critical modules that involved data intensive operations using the <strong>Background Worker</strong> &amp; improved performance by approximately <strong>60%</strong></li>
-                                <li>Spearheaded the migration of <strong>BET networks</strong> onto the application, automating several of the manual processes ultimately ensuring huge savings on tasks that would have otherwise been outsourced for manual execution</li>
-                                <li>Implemented multiple console applications that facilitated bulk data inserts/updates for various modules helping users save several hours of manual work.</li>
-                                <li>Created a highly durable &amp; scalable <strong>RabbitMQ</strong> subscriber using <strong>EasyNetQ,</strong> that leveraged .Net <strong>Async</strong> <strong>Tasks</strong> to process multiple messages at once &amp; implemented a <strong>re-try mechanism</strong> for failed messages using the message headers to keep track of the re-try count</li>
-                            </ul>
-                            <br/>                            
-                            <p>
-                                <Strong>Tech Stack: </Strong>.Net Framework 4.5 (C#.Net & VB.Net), SQL Server 2008R2, Crystal Reports, Infragistics 2014, PetaPoco,XML, JSON, WEB API, SOAP UI 3.5, Tortoise SVN 1.6, EasyNetQ & RabbitMQ
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Mar 2012 - Present</li>
-                                <li><Strong>Client:</Strong> Viacom Inc.</li>
-                                <li><Strong>Category:</Strong> Windows Forms Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 7 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                          <h3>Media Monitor</h3>
-                            <p class="item-intro text-muted">Sr. Software Engineer - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                The application was designed to assist the multiplatform departments of the client to package and deliver media assets present in the DAM. The assets were subject to multiple stitching processes based on work orders prior to delivery to external vendors. The application was designed to automate a critical part of the supply chain that involved generating metadata & tagging it to the corresponding package meant for delivery.
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Supervised the deliverables for <strong>two projects</strong> simultaneously, mentoring the junior developers on both teams</li>
-                                <li>Responsible for development of critical &amp; time sensitive modules using <strong>Net, C#.Net, LINQ,</strong> <strong>Crystal Reports</strong> &amp; <strong>Infragistics</strong></li>
-                                <li>Designed &amp; developed modules in <strong>XAML</strong> &amp; C#.Net using <strong>MVVM</strong> framework for Media Monitor, which was a <strong>WPF</strong> application</li>
-                                <li>Created a <strong>custom reusable windows forms control</strong> that allowed for a button to be placed on an Infragistics column header</li>
-                                <li>Conducted Resource Loading, Timesheet Tracking, Senior Management Reviews &amp; QA Compliance as per <strong>CMMI SVC 1.3</strong></li>
-                                <li>Improved overall quality of project deliverables by designing coding standards &amp; implementing appropriate design patterns which were enforced by mandatory code reviews before code commits</li>
-                                <li>Effectively used <strong>PetaPoco</strong>, a micro-ORM, for a fast &amp; seamless interaction with the database</li>
-                                <li>Created an <strong>Email Processor</strong> console application that searched through the logged in user&rsquo;s mailbox look for emails with a specified subject &amp; performed certain operations. Multiple applications report errors to system admins by emails, this tool was a quick &amp; easy way to process them &amp; take specific actions on each</li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong>.Net Framework 4.5, SQL Server 2008R2, PetaPoco, Crystal Reports, Infragistics 2014, PetaPoco, RabbitMQ, XAML
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Oct 2013 - Nov 2013</li>
-                                <li><Strong>Client:</Strong> Viacom Inc.</li>
-                                <li><Strong>Category:</Strong> WPF Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>  
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 8 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                           <h3>Bugnet Project Tracking System</h3>
-                            <p class="item-intro text-muted">Software Engineer - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                BugNet is a free, open source issue tracking and project management solution implemented on the ASP.NET platform. The project to implement it internally was a personal initiative to address multiple drawbacks of the existing project management system. The implemented application was designed for planning, tracking and reporting of all deliverables, generating intuitive reports on demand and by schedule for senior management enabling them to take quick informed decisions easily.
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Actively involved in the development &amp; maintenance of 2 projects</li>
-                                <li>Designed the UI &amp; implemented the template layouts using ASP.NET, HTML, CSS &amp; <strong>JavaScript</strong></li>
-                                <li>Implemented server caching techniques, state management, forms authentication, and created Master Pages in <strong>ASP .NET</strong>using <strong>MVC</strong> Architecture</li>
-                                <li>Deployed the Web Application to local servers using IIS 7</li>
-                                <li>Fixed &amp; submitted multiple bug fixes to the open source project, some of which were incorporated in subsequent releases</li>
-                                <li>Developed complex reports in <strong>SSRS</strong> leveraging stored procedures implemented in <strong>SQL Server 2005</strong></li>
-                                <li>Worked extensively on creating database objects like Stored Procedures, Triggers, Views and Functions</li>
-                            </ul>
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong>.Net Framework 3.0 (C#.Net), SQL Server 2005, ASP.Net, HTML, CSS, JavaScript, SSRS
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Jul 2011 - Mar 2012</li>
-                                <li><Strong>Client:</Strong> L&T Infotech</li>
-                                <li><Strong>Category:</Strong> Web Application </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 9 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                           <h3>Anti-Piracy Web Crawler</h3>
-                            <p class="item-intro text-muted">Software Intern - L&T Infotech</p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                This proof of concept contained a suite of tools designed to track piracy of specific audio and video content on the internet. The objective of the project was to track and obtain details of videos being aired or available for download across several popular sites such as YouTube, MetaCafe etc. Given a list of content titles, the script crawled through several predefined media hosting sites & identified content matching the titles that were available for download/online viewing. The script tagged the links & downloaded the content where available for further scrutiny
-                            </p>
-                            <h4>Responsibilities:</h4>
-                            <ul>
-                                <li>Developed the algorithm to crawl through websites using <strong>VBScript</strong></li>
-                                <li>Designed the database schema and implemented it using <strong>MS Access</strong></li>
-                                <li>Generated analytical reports of Pirated Videos &amp; extrapolated various patterns &amp; usage across several demographics using <strong>SSRS</strong></li>
-                                <li>Performed Unit &amp; Integration Testing</li>
-                                <li>Documented &amp; Maintained design documents &amp; release notes</li>
-                            </ul>
-                            <br/>                            
-                            <p>
-                                <Strong>Tech Stack: </Strong>VBScript, SSRS, MS Access, Visual Source Safe
-                            </p>
-                            <ul class="list-inline">
-                                <li><Strong>Date:</Strong> Jun 2010 - Jul 2010</li>
-                                <li><Strong>Client:</Strong> Warner Bros.</li>
-                                <li><Strong>Category:</Strong> Web Crawler</li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   
-     <!-- Portfolio Modal 7 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Fuzzy Mapper</h3>
-                            <p class="item-intro text-muted"></p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                    The Fuzzy Mapper is a simple Windows Forms application that will allow you to compare & map data from 2 excels using fuzzy string matching algorithms. The application allows you to specify the columns which need to be compared (one or more) & also allows you to specify the accuracy at which the algorithms should operate.
-                                    The code & sample app can be found <a href="https://github.com/karthiks3000/fuzzymapper">here.</a>                                        
-                            </p>
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Supports fuzzy matching using 3 algorithms - Levenshtein Distance, Dice Coefficient & Longest Common Subsequence</li>
-                                <li>Allows users to specify accuracy at which alogrithms are applied</li>
-                                <li>Mapping can be performed based on multiple columns at once</li>
-                                <li>Data from 2 excels can either be Mapped or Merged</li>
-                                <li>Intuitive & easy to use UI that includes grid features like sorting, filtering, column chooser & column grouping</li>
-                                <li>Data can easily be exported to excel</li>
-                            </ul>
-                            <br/>                                
-                            <div id='image-carousel2' class="carousel slide" data-ride='carousel'>
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target='#image-carousel2' data-slide-to="0" class="active"></li>
-                                    <li data-target='#image-carousel2' data-slide-to="1"></li>
-                                    <li data-target='#image-carousel2' data-slide-to="2"></li>                                                   
-                                    
-                                </ol>
-                                <!-- Wrapper for Images -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <img src="img/portfolio/fuzzy-mapper-form1.PNG" alt="">
-                                        <div class="carousel-caption"></div>
-                                    </div>                       
-                                    <div class="item">
-                                        <img src="img/portfolio/fuzzy-mapper-form2.PNG" alt="">
-                                        <div class="carousel-caption"></div>
-                                    </div>
-                                    <div class="item">
-                                        <img src="img/portfolio/fuzzy-mapper-form3.PNG" alt="">
-                                        <div class="carousel-caption">
+                
+                <!-- Interactive Flip Card Section -->
+                <div id="ai-teaser-section" class="hidden mt-8 max-w-2xl mx-auto">
+                    <div class="flip-card-container perspective-1000">
+                        <div class="flip-card-inner" id="flip-card-inner">
+                            <!-- Front Side: Dynamic AI Options Interface -->
+                            <div class="flip-card-front">
+                                <div class="bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20 rounded-xl p-6 backdrop-blur-sm">
+                                    <div class="text-center">
+                                        <h2 class="text-xl font-semibold text-gray-100 mb-3">Wanna know more about me?</h2>
+                                        
+                                        <!-- Dynamic content based on AI state -->
+                                        <p id="ai-teaser-inline-text" class="text-gray-300 text-sm mb-4 leading-relaxed">
+                                            You can either flip this card and view my info or chat with my AI assistant and get a sneak peek with hidden insights (and hallucinations 😉)
+                                        </p>
+                                        <!-- Chrome AI Documentation Link -->
+                                        <a href="https://developer.chrome.com/docs/ai/get-started" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs text-gray-500 hover:text-gray-400 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-gray-400 rounded px-2 py-1 mb-2 underline">
+                                            Learn more about Chrome built-in AI
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                        <!-- Loading indicator for AI detection (initially shown) -->
+                                        <div id="ai-detection-loading" class="mb-4">
+                                            <div class="flex items-center justify-center space-x-2">
+                                                <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-400"></div>
+                                                <span class="text-xs text-gray-400">Checking AI capabilities...</span>
+                                            </div>
                                         </div>
-                                    </div>                                                  
+                                        
+                                        <!-- Downloading indicator (hidden by default) -->
+                                        <div id="ai-downloading-indicator" class="hidden mb-4">
+                                            <div class="flex items-center justify-center space-x-2">
+                                                <div class="animate-pulse rounded-full h-3 w-3 bg-blue-400"></div>
+                                                <span class="text-xs text-blue-400">AI model downloading...</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Dynamic buttons container -->
+                                        <div id="ai-action-buttons" class="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+                                            <!-- Download AI button (hidden by default) -->
+                                            <button id="ai-download-btn" class="hidden inline-flex items-center justify-center bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-4 py-2">
+                                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/>
+                                                </svg>
+                                                Download AI Model
+                                            </button>
+                                            
+                                            
+                                            <!-- Always visible flip card button -->
+                                            <button id="flip-card-inline-btn" class="inline-flex items-center justify-center bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 hover:text-blue-300 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-4 py-2">
+                                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                                </svg>
+                                                No Thanks, I like boring
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
+                            </div>
+                            
+                            <!-- Back Side: Personal Introduction -->
+                            <div class="flip-card-back">
+                                <div class="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-xl backdrop-blur-sm h-full">
+                                    <div class="h-full flex flex-col justify-between">
+                                        <div class="personal-intro-text text-left flex-1 flex flex-col justify-center">
+                                            <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                                                I'm a software engineer and proud twin dad blessed with a boy and a girl. My journey started in Mumbai where I began my career, then took me through nearly 7 years in New York before finding my way to Canada - first Toronto, and now calling Waterloo home.
+                                            </p>
+                                            
+                                            <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                                                <!-- This will be populated by JavaScript from personalIntro -->
+                                            </p>
+                                            
+                                            <p class="text-gray-300 text-sm leading-relaxed">
+                                                When I'm not busy with work or playing with the kids, you'll find me savoring the perfect cup of coffee, diving into RPG adventures, or flying my drone around Waterloo. I believe the best code tells a story, and I love sharing those stories through technical writing and open source contributions.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="text-center">
+                                            <button id="flip-back-btn" class="inline-flex items-center justify-center bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-300 font-medium text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-lg px-4 py-2">
+                                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                                                </svg>
+                                                Back
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Subtle Scroll Indicator -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 scroll-indicator" aria-hidden="true">
+                    <div class="flex flex-col items-center text-gray-400">
+                        <span class="text-sm mb-2 hidden sm:block">Scroll to explore</span>
+                        <span class="text-xs mb-2 sm:hidden">Scroll down</span>
+                        <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+                            <div class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </header>
+
+        <!-- Live region for screen reader announcements -->
+        <div id="live-region" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+        <!-- Skills & Superpowers Section -->
+        <section id="skills" class="py-16 sm:py-20 bg-gray-800 relative overflow-hidden" aria-labelledby="skills-heading" role="region">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(96,165,250,0.15) 1px, transparent 0); background-size: 25px 25px;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 id="skills-heading" class="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">Skills & Superpowers</h2>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                        AI innovations, technical expertise, and leadership adventures in modern software development
+                    </p>
+                </div>
+                
+                <!-- AI Superpowers Section -->
+                <div class="mb-16 animate-on-scroll">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-100 mb-3">🤖 AI Superpowers</h3>
+                        <p class="text-gray-400">Real accomplishments with artificial intelligence</p>
+                    </div>
+                    
+                    <!-- AI Achievement Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <!-- Multi-AI Conductor -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-violet-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-violet-500/10 rounded-xl flex items-center justify-center group-hover:bg-violet-500/20 transition-colors duration-300 mr-4">
+                                        <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-gray-100 group-hover:text-violet-400 transition-colors duration-300">
+                                        AI Whisperer
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                                    <em>"Master of AI diplomatic relations - can negotiate with AI to produce clean, deployable code with strategic prompt engineering."</em>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">Cline</span>
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">GitHub Copilot</span>
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">Claude Code</span>
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">Kiro</span>
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">Amazon Q Developer</span>
+                                    <span class="px-2 py-1 bg-violet-500/10 text-violet-400 text-xs rounded-full">Jules</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- RAG & GraphRAG Architect -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors duration-300 mr-4">
+                                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-gray-100 group-hover:text-cyan-400 transition-colors duration-300">
+                                        Context Curator
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                                    <em>"RAG wizard who turns chaotic data into precise AI context using AWS Bedrock, PostgreSQL & Neptune DB. Specializes in making AI actually helpful instead of confidently wrong."</em>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">AWS Bedrock</span>
+                                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">PostgreSQL</span>
+                                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">Neptune DB</span>
+                                    <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full">GraphRAG</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Local AI Pioneer -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-emerald-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors duration-300 mr-4">
+                                        <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-gray-100 group-hover:text-emerald-400 transition-colors duration-300">
+                                        Local AI Pioneer
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                                    <em>"Keeps AI conversations local with Chrome's Gemini Nano - your browser, your data, your business (for those with trust issues)."</em>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">Chrome AI</span>
+                                    <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">Gemini Nano</span>
+                                    <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">Local LLM</span>
+                                    <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded-full">No Server</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Workflow Orchestrator -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-amber-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center group-hover:bg-amber-500/20 transition-colors duration-300 mr-4">
+                                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                    </div>
+                                    <h4 class="text-xl font-semibold text-gray-100 group-hover:text-amber-400 transition-colors duration-300">
+                                        AI Workflow Orchestrator
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                                    <em>"Designed classification and content orchestration systems using AWS Step Functions and Bedrock - making AI workflows dance to business logic"</em>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">Step Functions</span>
+                                    <span class="px-2 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">AWS Bedrock</span>
+                                    <span class="px-2 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">Classification</span>
+                                    <span class="px-2 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full">Orchestration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Toolbox Section -->
+                <div class="mb-16 animate-on-scroll">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-100 mb-3">💻 Digital Toolbox</h3>
+                        <p class="text-gray-400">Weapons of choice for turning coffee and requirements into actual software</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Languages and Frameworks Column -->
+                        <div class="space-y-6">
+                            <!-- Languages -->
+                            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700">
+                                <h4 class="text-lg font-semibold text-gray-100 mb-4 flex items-center">
+                                    <span class="mr-3">🔤</span>Languages
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full">JavaScript</span>
+                                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full">TypeScript</span>
+                                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full">Python</span>
+                                    <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-sm rounded-full">Java</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Frameworks & Tools -->
+                            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700">
+                                <h4 class="text-lg font-semibold text-gray-100 mb-4 flex items-center">
+                                    <span class="mr-3">🛠️</span>Frameworks
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm rounded-full">SpringBoot</span>
+                                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm rounded-full">Django</span>
+                                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm rounded-full">React</span>
+                                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm rounded-full">Node.js</span>
+                                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-sm rounded-full">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- AWS Column -->
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700">
+                            <h4 class="text-lg font-semibold text-gray-100 mb-4 flex items-center">
+                                <span class="mr-3">☁️</span>AWS
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">API Gateway</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Aurora Postgres</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Bedrock</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">CDK</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">CloudFormation</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">CloudFront</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Cloudwatch</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">DMS</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">DynamoDB</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">EC2</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">ECS</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Kinesis Analytics</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Kinesis Data Streams</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Kinesis Firehose</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Lambda</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">NeptuneDB</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Neptune Analytics</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">OpenSearch</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">S3</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">SNS</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">SQS</span>
+                                <span class="px-3 py-1 bg-orange-500/10 text-orange-400 text-sm rounded-full">Step Functions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Leadership Skills Section -->
+                <div class="mb-16 animate-on-scroll">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-100 mb-3">🤝 Leadership Philosophy</h3>
+                        <p class="text-gray-400">Leadership skills with a sense of humor and a people-first approach</p>
+                    </div>
+                    
+                    <!-- Leadership Skills Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Team Whisperer -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">🗣️</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-blue-400 transition-colors duration-300">
+                                        Team Whisperer
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Successfully translated 'it's just a small change' into proper project timelines (while keeping everyone's sanity intact)"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Meeting Efficiency Expert -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-emerald-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">🥷</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-emerald-400 transition-colors duration-300">
+                                        Meeting Efficiency Expert
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Can turn a 2-hour debate into a 10-minute decision by making sure everyone feels heard first (coffee still helps)"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Deadline Juggler -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">🤹</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-purple-400 transition-colors duration-300">
+                                        Priority Juggler
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Gently reminds stakeholders that if everything is a priority, then we're just really expensive firefighters with laptops"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Growth Enabler -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-rose-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-rose-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">🧘</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-rose-400 transition-colors duration-300">
+                                        Growth Enabler
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Helps junior devs discover the joy of reading error messages - then celebrates their wins louder than their failures"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Crisis Absorber -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">🚨</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-red-400 transition-colors duration-300">
+                                        Crisis Absorber
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Remains calm when production goes down... after the initial 30 seconds of panic (then handles the uncomfortable calls)"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Innovation Catalyst -->
+                        <div class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 border border-gray-700 hover:border-yellow-500/50 transition-all duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="text-center mb-4">
+                                    <div class="text-3xl mb-2">💡</div>
+                                    <h4 class="text-lg font-semibold text-gray-100 group-hover:text-yellow-400 transition-colors duration-300">
+                                        Innovation Catalyst
+                                    </h4>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed italic text-center">
+                                    "Embraces rapid prototyping because 'perfect' is the enemy of 'shipped' (and shipped pays the bills)"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 sm:py-20 bg-gray-900 relative overflow-hidden" aria-labelledby="experience-heading" role="region">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 id="experience-heading" class="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">Professional Experience</h2>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                        Evolution from writing code that works to building teams that deliver
+                    </p>
+                </div>
+                
+                <!-- Experience Timeline -->
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600"></div>
+                    
+                    <!-- Dynamic Experience Timeline Container -->
+                    <div id="experience-timeline" class="space-y-12 animate-on-scroll">
+                        <!-- Experience items will be dynamically generated by JavaScript -->
+                        <div class="text-center py-12">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto mb-4"></div>
+                            <p class="text-gray-400 text-sm">Loading experience timeline...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="py-16 sm:py-20 bg-gray-800 relative overflow-hidden" aria-labelledby="projects-heading" role="region">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 id="projects-heading" class="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">Featured Projects</h2>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                        Curated selection of technical projects showcasing innovation and expertise
+                    </p>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll">
+                    <!-- Projects will be dynamically generated by JavaScript -->
+                    <div class="col-span-full text-center py-12">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto mb-4"></div>
+                        <p class="text-gray-400 text-sm">Loading featured projects...</p>
+                    </div>
+                </div>
+            </div>
+                
+                <!-- Additional Projects Link -->
+                <div id="additional-projects-link" class="text-center mt-12">
+                    <!-- Will be populated by JavaScript from socialLinks -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Background & Credentials Section -->
+        <section id="background" class="py-16 sm:py-20 bg-gray-900 relative overflow-hidden" aria-labelledby="background-heading" role="region">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 id="background-heading" class="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">Background & Credentials</h2>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                        Education, certifications, and professional achievements
+                    </p>
+                </div>
+                
+                <!-- Content Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-on-scroll">
+                    <!-- Education Card -->
+                    <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 sm:p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <!-- Education Icon -->
+                            <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center group-hover:bg-blue-500/20 transition-colors duration-300 mb-6">
+                                <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                                </svg>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold text-gray-100 mb-4">Education</h3>
+                            
+                            <div class="space-y-3">
+                                <div>
+                                    <h4 class="font-medium text-gray-200 mb-1">Bachelor of Engineering</h4>
+                                    <p class="text-gray-400 text-sm mb-1">Information Technology</p>
+                                    <p class="text-gray-500 text-sm">University of Mumbai • 2011</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Card -->
+                    <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 sm:p-8 border border-gray-700 hover:border-orange-500/50 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <!-- Certification Icon -->
+                            <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:bg-orange-500/20 transition-colors duration-300 mb-6">
+                                <svg class="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold text-gray-100 mb-4">Certifications</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.083.342-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-200 mb-1">AWS Certified Cloud Practitioner</h4>
+                                        <p class="text-gray-400 text-sm mb-1">Amazon Web Services</p>
+                                        <p class="text-gray-500 text-sm">2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Professional Recognition Card -->
+                    <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 sm:p-8 border border-gray-700 hover:border-emerald-500/50 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <!-- Recognition Icon -->
+                            <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors duration-300 mb-6">
+                                <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                </svg>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold text-gray-100 mb-4">Recognition</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-8 h-8 bg-emerald-500/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.083.342-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-200 mb-1">AWS Community Builders</h4>
+                                        <p class="text-gray-400 text-sm mb-1">Amazon Web Services</p>
+                                        <p class="text-gray-500 text-sm mb-2">2025</p>
+                                        <p class="text-gray-400 text-xs leading-relaxed">
+                                            Selected member contributing to the AWS community through technical content and expertise sharing
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-20 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden" aria-labelledby="contact-heading" role="region">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(96,165,250,0.15) 1px, transparent 0); background-size: 30px 30px;"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+                <div class="mb-12 sm:mb-16">
+                    <h2 id="contact-heading" class="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">Let's Connect</h2>
+                    <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                        Ready to discuss your next project or explore collaboration opportunities?
+                    </p>
+                </div>
+                
+                <!-- Contact Form Section -->
+                <div class="max-w-2xl mx-auto animate-on-scroll">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <div class="text-center mb-8">
+                                <div class="w-16 h-16 bg-blue-500/10 rounded-xl flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
+                                    <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-100 mb-2">Get In Touch</h3>
+                                <p class="text-gray-400">Have a question or want to connect? Send me a message!</p>
+                            </div>
+                            
+                            <!-- Form message container for success/error messages -->
+                            <div id="form-message" class="form-message mb-6 hidden" role="alert" aria-live="polite"></div>
+                            
+                            <!-- Contact Form -->
+                            <form id="contact-form" class="contact-form-container space-y-6" novalidate>
+                                <!-- Name Field -->
+                                <div class="form-group">
+                                    <label for="name" class="block text-sm font-medium text-gray-200 mb-2">
+                                        Name <span class="text-red-400" aria-label="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        required 
+                                        maxlength="100"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors duration-300 placeholder-gray-400"
+                                        placeholder="Your full name"
+                                        aria-describedby="name-error"
+                                    >
+                                    <div id="name-error" class="field-error mt-1 text-sm text-red-400 hidden" role="alert"></div>
+                                </div>
+                                
+                                <!-- Email Field -->
+                                <div class="form-group">
+                                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">
+                                        Email <span class="text-red-400" aria-label="required">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required
+                                        maxlength="150"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors duration-300 placeholder-gray-400"
+                                        placeholder="your.email@example.com"
+                                        aria-describedby="email-error"
+                                    >
+                                    <div id="email-error" class="field-error mt-1 text-sm text-red-400 hidden" role="alert"></div>
+                                </div>
+                                
+                                <!-- Message Field -->
+                                <div class="form-group">
+                                    <label for="message" class="block text-sm font-medium text-gray-200 mb-2">
+                                        Message <span class="text-red-400" aria-label="required">*</span>
+                                    </label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        rows="5" 
+                                        required
+                                        maxlength="1000"
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors duration-300 placeholder-gray-400 resize-vertical"
+                                        placeholder="Tell me about your project, question, or just say hello..."
+                                        aria-describedby="message-error message-counter"
+                                    ></textarea>
+                                    <div class="flex justify-between items-center mt-1">
+                                        <div id="message-error" class="field-error text-sm text-red-400 hidden" role="alert"></div>
+                                        <div id="message-counter" class="text-xs text-gray-500" aria-live="polite">
+                                            <span id="message-count">0</span>/1000 characters
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div class="form-group">
+                                    <button 
+                                        type="submit" 
+                                        id="contact-submit-btn"
+                                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                        aria-describedby="submit-status"
+                                    >
+                                        <span class="submit-text">Send Message</span>
+                                        <svg class="w-5 h-5 submit-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                        </svg>
+                                        <!-- Loading spinner (hidden by default) -->
+                                        <svg class="w-5 h-5 loading-spinner hidden animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle>
+                                            <path fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" class="opacity-75"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="submit-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal Footer -->
+        <footer class="py-12 bg-gray-800 border-t border-gray-700" role="contentinfo" aria-labelledby="footer-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
+                    <!-- Copyright -->
+                    <div class="text-center sm:text-left">
+                        <h3 id="footer-heading" class="sr-only">Footer</h3>
+                        <p class="text-gray-400 text-sm">
+                            <!-- Dynamic copyright will be populated by JavaScript -->
+                        </p>
+                    </div>
+                    <div class="flex justify-center mb-6">
+                        <nav id="footer-social-links" class="flex gap-6" aria-label="Social media links">
+                            <!-- Social links will be dynamically generated from socialLinks array -->
+                        </nav>
+                    </div>
+                    
+                    <!-- Essential Links -->
+                    <nav aria-label="Footer navigation" class="flex flex-wrap justify-center sm:justify-end items-center gap-4 sm:gap-6">
+                        <!-- Back to Top -->
+                        <a href="#hero" 
+                           class="text-gray-400 hover:text-blue-400 focus:text-blue-400 transition-colors duration-300 text-sm font-medium px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-800"
+                           aria-label="Back to top">
+                            Back to Top
+                        </a>
+                        
+                    </nav>
+                </div>
+                
+                <!-- Additional Footer Info -->
+                <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                    <p class="text-gray-400 text-xs">
+                        Built with accessibility in mind
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <!-- AI Chat Interface (conditionally rendered based on browser support) -->
+    <div id="ai-chat-interface" class="chat-widget hidden" aria-hidden="true">
+        <!-- Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open AI chat assistant">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+        </button>
         
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#image-carousel2" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-    
-                                <a class="right carousel-control" href="#image-carousel2" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>                                                                                      
-                            <br/>
-                            <p>
-                                <Strong>Tech Stack: </Strong>C#.Net, Infragistics, .Net Framework 4.5
-                            </p>                                
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
+        <!-- Chat Window -->
+        <div id="chat-window" class="chat-window hidden">
+            <!-- Header -->
+            <div class="chat-header">
+                <div>
+                    <h2 id="chat-title">Chat with AI Assistant</h2>
+                    <span class="chat-subtitle">Ask me about my experience</span>
                 </div>
+                <button class="chat-close">×</button>
             </div>
-        </div>
-    </div> 
-
-    <!-- Portfolio Modal 8 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
+            
+            <!-- Messages Container - THE KEY FIX -->
+            <div class="chat-messages">
+                <!-- Messages will stack from bottom up -->
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>File Comparison</h3>
-                            <p class="item-intro text-muted"></p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                    A simple Python script that compares the contents of 2 folders and spits out an excel with the results. The script iteratively scans through all sub folders and files of the source and searches for the corresponding file & folder structure in the destination.
-                                    For each file it finds it performs an MD5 checksum comparison to verify if they are the same.
-                                    The code can be found <a href="https://github.com/karthiks3000/FileComparison">here.</a>
-                                    
-                            </p>
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Light weight & easy to use</li>
-                                <li>Extremely fast, kicks off multiple threads to process the files asynchronously</li>
-                                <li>Will iterate through all sub folders and files</li>
-                                <li>Computes the total size of all the files found at source and all corresponding files fount at destination</li>
-                                <li>Computes an MD5 checksum of both source and destination file for true comparison</li>
-                                <li>Exports an excel with all the details</li>
-                            </ul>
-                            <br/>                            
-                            <p>
-                                <Strong>Tech Stack: </Strong>Python 3.6
-                            </p>                               
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Portfolio Modal 9 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h3>Content LookUp</h3>
-                            <p class="item-intro text-muted"></p>
-                            <!--<img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">-->
-                            <p>
-                                    An angular application to lookup contents from the Library of Congress & EIDR. 
-                                    The code can be found <a href="https://github.com/karthiks3000/content-lookup">here.</a>
-                                    
-                            </p>
-                            <h4>Features:</h4>
-                            <ul>
-                                <li>Reflects how to implement a simple search as you type functionality using rxjs observables, subject and debounceTime & distinctUntilChanged operators</li>
-                                <li>The response from EIDR is an XML response which is converted to JSON using the xml2js package</li>
-                                <li>Will iterate through all sub folders and files</li>
-                                <li>Both search implementations are subscribed to the same search text box. Depending on the view currently displayed, the corresponding search is kicked off </li>
-                            </ul>
-                            <br/>                            
-                            <p>
-                                <Strong>Tech Stack: </Strong>Angular 5, RxJS
-                            </p>                               
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
+            
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <input type="text" placeholder="Type your message..." maxlength="500">
+                <button class="chat-send">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
-<script>
-    $("#intro").hide().fadeIn(4000);
-</script>
+    <!-- Profile Data -->
+    <script src="scripts/data.js"></script>
+    
+    <!-- Dynamic Content Updater - Updates meta tags and content from data.js -->
+    <script>
+        // Update meta tags and page content from data.js
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update basic meta tags
+            if (typeof siteConfig !== 'undefined') {
+                document.title = siteConfig.title;
+                document.querySelector('meta[name="description"]').setAttribute('content', siteConfig.description);
+                document.querySelector('meta[name="keywords"]').setAttribute('content', siteConfig.keywords);
+                document.querySelector('meta[name="author"]').setAttribute('content', siteConfig.author);
+                
+                // Update Open Graph tags
+                document.querySelector('meta[property="og:title"]').setAttribute('content', siteConfig.title);
+                document.querySelector('meta[property="og:description"]').setAttribute('content', siteConfig.description);
+                document.querySelector('meta[property="og:type"]').setAttribute('content', siteConfig.ogType);
+                document.querySelector('meta[property="og:url"]').setAttribute('content', siteConfig.ogUrl);
+                
+                // Update Twitter Card tags
+                document.querySelector('meta[name="twitter:title"]').setAttribute('content', siteConfig.twitterTitle);
+                document.querySelector('meta[name="twitter:description"]').setAttribute('content', siteConfig.twitterDescription);
+                document.querySelector('meta[name="twitter:card"]').setAttribute('content', siteConfig.twitterCard);
+                
+                // Update theme color
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', siteConfig.themeColor);
+                
+                // Update favicon if different
+                const faviconLink = document.querySelector('link[rel="icon"]');
+                if (faviconLink && siteConfig.faviconPath !== 'assets/favicon.svg') {
+                    faviconLink.href = siteConfig.faviconPath;
+                }
+                
+                // Update mobile app title
+                const mobileAppTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
+                if (mobileAppTitle) {
+                    mobileAppTitle.setAttribute('content', siteConfig.title);
+                }
+            }
+            
+            // Update personal information in hero section
+            if (typeof personalInfo !== 'undefined') {
+                // Update hero heading
+                const heroHeading = document.getElementById('hero-heading');
+                if (heroHeading) {
+                    heroHeading.textContent = personalInfo.name;
+                }
+                
+                // Update profile image alt text
+                const profileImg = document.querySelector('#hero img[src="assets/profile.jpg"]');
+                if (profileImg) {
+                    profileImg.alt = `Professional headshot of ${personalInfo.name}, ${personalInfo.title}`;
+                }
+                
+                // Update copyright year and name in footer
+                const copyrightText = document.querySelector('footer p');
+                if (copyrightText) {
+                    const currentYear = new Date().getFullYear();
+                    copyrightText.innerHTML = `&copy; ${currentYear} ${personalInfo.name}. All rights reserved.`;
+                }
+            }
+            
+            // Update personal introduction in flip card
+            if (typeof personalIntro !== 'undefined') {
+                const introContainer = document.querySelector('.personal-intro-text');
+                if (introContainer) {
+                    introContainer.innerHTML = `
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            ${personalIntro.paragraph1}
+                        </p>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">
+                            ${personalIntro.paragraph2}
+                        </p>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            ${personalIntro.paragraph3}
+                        </p>
+                    `;
+                }
+            }
+            
+            // Update contact email links
+            if (typeof contactConfig !== 'undefined' && contactConfig.contactEmail) {
+                const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+                emailLinks.forEach(link => {
+                    // Update any existing mailto links to use the configured email
+                    const currentEmail = link.href.replace('mailto:', '');
+                    if (currentEmail && currentEmail !== contactConfig.contactEmail) {
+                        link.href = `mailto:${contactConfig.contactEmail}`;
+                        link.setAttribute('aria-label', `Send email to ${personalInfo?.name || 'me'}`);
+                    }
+                });
+            }
+            
+            // Update AI chat header
+            if (typeof personalInfo !== 'undefined') {
+                const chatTitle = document.getElementById('chat-title');
+                if (chatTitle) {
+                    const firstName = personalInfo.name ? personalInfo.name.split(' ')[0] : 'AI';
+                    chatTitle.textContent = `Chat with AI ${firstName}`;
+                }
+            }
+            
+            // Update footer social links
+            if (typeof socialLinks !== 'undefined' && socialLinks.length > 0) {
+                const footerSocialLinks = document.getElementById('footer-social-links');
+                if (footerSocialLinks) {
+                    const userName = personalInfo?.name || 'User';
+                    
+                    footerSocialLinks.innerHTML = socialLinks.map(link => {
+                        // Get appropriate icon based on platform
+                        let iconSvg = '';
+                        if (link.platform.toLowerCase() === 'linkedin') {
+                            iconSvg = `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>`;
+                        } else if (link.platform.toLowerCase() === 'github') {
+                            iconSvg = `<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>`;
+                        } else if (link.platform.toLowerCase().includes('email') || link.url.startsWith('mailto:')) {
+                            iconSvg = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>`;
+                        } else {
+                            // Generic external link icon
+                            iconSvg = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>`;
+                        }
+                        
+                        let ariaLabel;
+                        if (link.platform.toLowerCase() === 'linkedin') {
+                            ariaLabel = `Connect with ${userName} on LinkedIn (opens in new tab)`;
+                        } else if (link.platform.toLowerCase() === 'github') {
+                            ariaLabel = `View ${userName}'s GitHub projects (opens in new tab)`;
+                        } else if (link.url.startsWith('mailto:')) {
+                            ariaLabel = `Send email to ${userName}`;
+                        } else {
+                            ariaLabel = `Visit ${userName}'s ${link.platform} (opens in new tab)`;
+                        }
+                        
+                        return `
+                            <a href="${link.url}" 
+                               target="_blank" rel="noopener noreferrer"
+                               class="text-gray-400 hover:text-blue-400 focus:text-blue-400 transition-colors duration-300 p-3 rounded-lg hover:bg-gray-700 focus:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-800"
+                               aria-label="${ariaLabel}">
+                                ${iconSvg}
+                                <span class="sr-only">${link.platform}</span>
+                            </a>
+                        `;
+                    }).join('');
+                }
+            }
+            
+            console.log('✅ Dynamic content updated from data.js');
+        });
+    </script>
+    
+    <!-- Consolidated AI Manager (handles all AI functionality) -->
+    <script src="scripts/ai-manager.js"></script>
+    
+    <!-- AI Chat Interface -->
+    <script src="scripts/ai-chat-interface.js"></script>
+    
+    <!-- Main Application Scripts -->
+    <script src="scripts/main.js"></script>
+    
+    <!-- Animation Scripts -->
+    <script src="scripts/animations.js"></script>
+    
+    <!-- Accessibility Enhancements -->
+    <script src="scripts/accessibility-enhancements.js"></script>
+    
 </body>
-
 </html>
