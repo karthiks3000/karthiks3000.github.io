@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Fast Lane for Half-Baked Ideas — Karthik Subramanian</title>
+  <meta name="description" content="Karthik Subramanian on the transparent idea-to-production funnel that made AI experimentation cheap and trusted — a two-week feedback promise and a single-sprint fast track.">
+  <link rel="canonical" href="https://karthiks3000.github.io/case-studies/idea-to-poc-pipeline.html">
+  <meta property="og:title" content="A fast lane for half-baked ideas">
+  <meta property="og:description" content="A work story: the intake funnel where ideas die visibly, with reasons — and the survivors are trusted.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://karthiks3000.github.io/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../index.html">Karthik Subramanian</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../index.html#writing">Writing</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Work story · process design</p>
+        <h1>A fast lane for half-baked ideas</h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <article class="entry">
+          <div class="rail">
+            <span class="stat">29 → 16 → 10</span>
+            <span class="label">ideas → PoCs → production</span>
+            <span class="stat">1 sprint</span>
+            <span class="label">idea → validated prototype</span>
+            <span class="label label-gap">I wrote about this — <a href="https://dev.to/aws-builders/rapid-learnings-from-rapid-prototyping-54pe" target="_blank" rel="noopener noreferrer">the prototyping post</a></span>
+          </div>
+          <div class="body prose">
+            <p class="lede">When AI arrived, ideas came from all over — product, editorial, sales, engineering — and most of them stalled. Submitters felt ignored, prototype choices looked arbitrary, and people were losing faith that anything would come of "we're doing AI." The fix was a funnel anyone in the org could watch.</p>
+
+            <h2>How it works</h2>
+            <p>A public intake board where anyone in the organization can submit an AI idea and watch its status; a triage process with a promise — every submitter gets a substantive feedback summary within two weeks; and a fast-track path that takes low-risk ideas from concept to validated prototype inside a single sprint.</p>
+
+            <figure class="diagram">
+              <svg viewBox="0 0 640 180" role="img" aria-label="Diagram: 29 ideas narrow to 16 proofs of concept and 10 in production, with a visible exit for ideas killed with reasons">
+                <defs>
+                  <marker id="arr4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/>
+                  </marker>
+                </defs>
+                <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+                  <rect x="8" y="30" width="150" height="90" rx="6"/>
+                  <rect x="230" y="45" width="140" height="60" rx="6"/>
+                  <rect x="440" y="55" width="130" height="40" rx="6" stroke="var(--accent)" stroke-width="1.6"/>
+                  <path d="M158 75 L 226 75" marker-end="url(#arr4)"/>
+                  <path d="M370 75 L 436 75" marker-end="url(#arr4)"/>
+                  <path d="M300 105 L 300 150" marker-end="url(#arr4)" stroke-dasharray="4 4"/>
+                  <path d="M83 120 L 83 150" marker-end="url(#arr4)" stroke-dasharray="4 4"/>
+                </g>
+                <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="var(--ink)">
+                  <text x="20" y="60">29 ideas in</text>
+                  <text x="20" y="78" fill="var(--muted)">public board</text>
+                  <text x="20" y="94" fill="var(--muted)">feedback ≤ 2 weeks</text>
+                  <text x="242" y="70">16 PoCs built</text>
+                  <text x="242" y="86" fill="var(--muted)">fast track: 1 sprint</text>
+                  <text x="452" y="79" fill="var(--accent)">10 in production</text>
+                  <text x="96" y="168" fill="var(--muted)">killed early, with reasons</text>
+                  <text x="313" y="168" fill="var(--muted)">killed late, with reasons</text>
+                </g>
+              </svg>
+              <figcaption>The funnel is public inside the org, including which ideas got killed and why.</figcaption>
+            </figure>
+
+            <h2>What made it work</h2>
+            <p><strong>Make the funnel public.</strong> The funnel's numbers are public inside the org. When an idea gets killed, everyone can see why. That's a big part of why people trust the ones that advance.</p>
+            <p><strong>A fast track with explicit entry criteria.</strong> Treating every idea as equally risky kills momentum. Scoping a low-risk lane — bounded data, no customer exposure, reversible — let us validate ideas in days instead of waiting a quarter for the default process.</p>
+            <p><strong>Quarterly partner check-ins.</strong> Bottleneck reviews with product partners kept the pipeline pointed at strategy, and grew into a shared roadmap board aligning AI work with product priorities.</p>
+
+            <h2>The numbers</h2>
+            <p>In one fiscal year, 29 proposals came in, 16 became working proofs of concept, and 10 reached production or active development — we'd targeted 6–8 PoCs with 3–4 making it that far. The stat I care most about: all 29 submitters got substantive feedback within two weeks, including every "no." Experimentation got cheaper and more visible, and people started trusting the process again.</p>
+
+            <p>I designed the funnel, ran it, and did much of the prototype engineering myself. The fast track only works if the person running the funnel can also build what's in it. <a href="https://dev.to/aws-builders/rapid-learnings-from-rapid-prototyping-54pe" target="_blank" rel="noopener noreferrer">I wrote up what rapid prototyping taught me</a> along the way.</p>
+
+            <nav class="pager" aria-label="Work stories">
+              <p><span class="label">← previous story</span><a href="standards-correlation.html">Teaching a graph to read curriculum standards</a></p>
+              <p class="next"><span class="label">next story →</span><a href="ai-enablement-at-scale.html">One champion per team</a></p>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-h">On this site</p>
+        <p><a href="../index.html#writing">Writing</a> · <a href="../index.html#projects">Projects</a> · <a href="../index.html#work">Work</a> · <a href="../index.html#about">About</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Elsewhere</p>
+        <p><a href="https://github.com/karthiks3000" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://dev.to/karthiks3000" target="_blank" rel="noopener noreferrer">dev.to</a> · <a href="https://www.youtube.com/@karthiksubramanian290" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="https://www.linkedin.com/in/karthik-subramanian-7381b67b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://dev.to/feed/karthiks3000" target="_blank" rel="noopener noreferrer">RSS</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Colophon</p>
+        <p>Hand-written HTML &amp; CSS. No tracking, no build step. Videos play through YouTube&#39;s privacy-enhanced player, only after you press play. © 2026 Karthik Subramanian</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#" aria-label="Back to top">↑</a>
+</body>
+</html>

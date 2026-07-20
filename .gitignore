@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Private documents — never commit
+*.docx
+resume/out/
+resume/private/
+resume/
+docs/superpowers/
+consistency-checklist.md
+
+# Session/local
+.remember/
+.superpowers/

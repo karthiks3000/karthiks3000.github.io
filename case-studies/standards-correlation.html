@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching a Graph to Read Curriculum Standards — Karthik Subramanian</title>
+  <meta name="description" content="Karthik Subramanian on turning 'is this aligned to our standards?' from a quarter of manual work into a query — Amazon Neptune, Step Functions, Bedrock, and editors who approve what the model proposes.">
+  <link rel="canonical" href="https://karthiks3000.github.io/case-studies/standards-correlation.html">
+  <meta property="og:title" content="Teaching a graph to read curriculum standards">
+  <meta property="og:description" content="A work story: graph-backed standards correlation with human-in-the-loop editorial review.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://karthiks3000.github.io/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../index.html">Karthik Subramanian</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../index.html#writing">Writing</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Work story · graph systems</p>
+        <h1>Teaching a graph to read curriculum standards</h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <article class="entry">
+          <div class="rail">
+            <span class="stat">months → same week</span>
+            <span class="label">time to an answer</span>
+            <span class="stat">50 states</span>
+            <span class="label">one graph</span>
+            <span class="label label-gap">built with Neptune · Step Functions · Bedrock</span>
+            <span class="label label-gap">I wrote about this — <a href="https://dev.to/aws-builders/navigating-aws-neptune-graph-with-ai-55cm" target="_blank" rel="noopener noreferrer">the Neptune post</a></span>
+          </div>
+          <div class="body prose">
+            <p class="lede">Every U.S. state describes what students should learn in its own language. If you sell educational content nationally, "is this aligned to <em>our</em> standards?" is the first question a district asks — and our honest answer involved months of manual correlation work. So products shipped without alignment, sales conversations stalled, and every request meant another round of manual correlation work. To me it was obviously a graph problem that everyone was handling in spreadsheets.</p>
+
+            <h2>What we built</h2>
+            <p>A correlation service that treats the problem as a graph. State standards are hierarchical and heavily cross-referenced; content maps to them many-to-many, with room for judgment. We modeled standards and content as nodes in Amazon Neptune, with correlations as edges carrying confidence scores. A Bedrock adjudication stage returns structured correlation judgments with confidence scores; Step Functions orchestrates the batch pipeline across catalogs and standard revisions.</p>
+
+            <figure class="diagram">
+              <svg viewBox="0 0 640 190" role="img" aria-label="Diagram: catalog and standards flow into Bedrock adjudication, high-confidence correlations go to fast review, low-confidence to editorial review, both land in the Neptune graph">
+                <defs>
+                  <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/>
+                  </marker>
+                </defs>
+                <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+                  <rect x="8" y="60" width="120" height="66" rx="6"/>
+                  <rect x="188" y="60" width="140" height="66" rx="6" stroke="var(--accent)" stroke-width="1.6"/>
+                  <rect x="392" y="16" width="130" height="48" rx="6"/>
+                  <rect x="392" y="122" width="130" height="48" rx="6"/>
+                  <path d="M128 93 L 184 93" marker-end="url(#arr2)"/>
+                  <path d="M328 78 L 388 44" marker-end="url(#arr2)"/>
+                  <path d="M328 108 L 388 142" marker-end="url(#arr2)"/>
+                  <path d="M522 40 L 576 80" marker-end="url(#arr2)" stroke="var(--accent)" stroke-width="1.6"/>
+                  <path d="M522 146 L 576 106" marker-end="url(#arr2)" stroke="var(--accent)" stroke-width="1.6"/>
+                </g>
+                <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="var(--ink)">
+                  <text x="20" y="88">catalog +</text>
+                  <text x="20" y="104">standards</text>
+                  <text x="200" y="82">Bedrock adjudication</text>
+                  <text x="200" y="98" fill="var(--muted)">structured judgments</text>
+                  <text x="200" y="112" fill="var(--muted)">+ confidence</text>
+                  <text x="404" y="38">high conf →</text>
+                  <text x="404" y="52" fill="var(--muted)">fast review</text>
+                  <text x="404" y="144">low conf →</text>
+                  <text x="404" y="158" fill="var(--muted)">editorial judgment</text>
+                  <text x="582" y="90" fill="var(--accent)">Neptune</text>
+                  <text x="582" y="104" fill="var(--accent)">graph</text>
+                </g>
+              </svg>
+              <figcaption>Confidence scores route each correlation: high goes to fast review, low to full editorial review. Approved edges land in the graph.</figcaption>
+            </figure>
+
+            <h2>Design decisions</h2>
+            <p><strong>Model it as a graph.</strong> The value is in traversal — "show everything aligned to this strand, in this grade band, across these two state revisions." Those queries are painful in a relational model and straightforward in a graph.</p>
+            <p><strong>The model proposes; editors approve.</strong> Correlation quality is a promise we make to schools, so no correlation ships on model confidence alone. High-confidence matches go to fast review; low-confidence matches route to editorial judgment. The human review step is what made the output trustworthy enough to sell.</p>
+            <p><strong>Run it as a batch.</strong> Correlations change when catalogs or standards change, not on every request. Batch orchestration kept costs predictable and let us re-run whole catalogs when a state revised its standards.</p>
+
+            <h2>Results</h2>
+            <p>Standards alignment for the magazines catalog completed on schedule, and districts started getting answers the same week they asked. The service returned about $135K in sales that had been projected at zero, and avoided roughly $150K more in projected losses.</p>
+
+            <p>I architected the pipeline and led the five-person team that shipped it, spending as much time with product and sales on what "aligned" had to <em>mean</em> for a district to buy it as I spent on the traversal queries. If you want the technical warm-up that preceded this, <a href="https://dev.to/aws-builders/navigating-aws-neptune-graph-with-ai-55cm" target="_blank" rel="noopener noreferrer">I wrote about exploring Neptune graphs with AI agents</a>.</p>
+
+            <nav class="pager" aria-label="Work stories">
+              <p><span class="label">← previous story</span><a href="agent-harness-migration.html">The harness came first</a></p>
+              <p class="next"><span class="label">next story →</span><a href="idea-to-poc-pipeline.html">A fast lane for half-baked ideas</a></p>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-h">On this site</p>
+        <p><a href="../index.html#writing">Writing</a> · <a href="../index.html#projects">Projects</a> · <a href="../index.html#work">Work</a> · <a href="../index.html#about">About</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Elsewhere</p>
+        <p><a href="https://github.com/karthiks3000" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://dev.to/karthiks3000" target="_blank" rel="noopener noreferrer">dev.to</a> · <a href="https://www.youtube.com/@karthiksubramanian290" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="https://www.linkedin.com/in/karthik-subramanian-7381b67b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://dev.to/feed/karthiks3000" target="_blank" rel="noopener noreferrer">RSS</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Colophon</p>
+        <p>Hand-written HTML &amp; CSS. No tracking, no build step. Videos play through YouTube&#39;s privacy-enhanced player, only after you press play. © 2026 Karthik Subramanian</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#" aria-label="Back to top">↑</a>
+</body>
+</html>

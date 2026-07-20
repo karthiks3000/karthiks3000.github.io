@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Harness Came First — Karthik Subramanian</title>
+  <meta name="description" content="Karthik Subramanian on orchestrating Claude Code through a four-repository product consolidation — two weeks of scaffolding, fifteen days of supervised execution, 580 passing tests, zero bugs at QA.">
+  <link rel="canonical" href="https://karthiks3000.github.io/case-studies/agent-harness-migration.html">
+  <meta property="og:title" content="The harness came first">
+  <meta property="og:description" content="A work story: agent-driven engineering with a supervision model — the setup is the strategy.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://karthiks3000.github.io/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../index.html">Karthik Subramanian</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="../index.html#writing">Writing</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Work story · working with agents</p>
+        <h1>The harness came first</h1>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <article class="entry">
+          <div class="rail">
+            <span class="stat">4 repos → 2</span>
+            <span class="label">15 work days, one engineer</span>
+            <span class="stat">580 tests</span>
+            <span class="label">zero bugs at QA handoff</span>
+            <span class="label label-gap">built with Claude Code</span>
+            <span class="label label-gap">I wrote about this — <a href="https://dev.to/aws-builders/the-setup-is-the-strategy-how-i-orchestrated-a-product-migration-with-claude-code-b92" target="_blank" rel="noopener noreferrer">the full write-up</a></span>
+          </div>
+          <div class="body prose">
+            <p class="lede">Four legacy repositories, years of drift between them, and a product that needed to become one thing. The conventional plan was a multi-engineer quarter. I wanted to see if one engineer could run the whole consolidation with an AI agent doing the implementation and me reviewing every change before it merged. Most of the work that made it succeed happened before the agent wrote any code.</p>
+
+            <figure class="diagram">
+              <svg viewBox="0 0 640 170" role="img" aria-label="Diagram: scaffolding feeds an agent execution loop that must pass verification gates before merging">
+                <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+                  <rect x="8" y="30" width="150" height="90" rx="6"/>
+                  <rect x="230" y="45" width="130" height="60" rx="6" stroke="var(--accent)" stroke-width="1.6"/>
+                  <rect x="430" y="45" width="120" height="60" rx="6"/>
+                  <path d="M158 75 L 226 75" marker-end="url(#arr)"/>
+                  <path d="M360 75 L 426 75" marker-end="url(#arr)"/>
+                  <path d="M490 105 C 490 150, 295 150, 295 109" marker-end="url(#arr)" stroke-dasharray="4 4"/>
+                  <path d="M550 75 L 600 75" marker-end="url(#arr)" stroke="var(--accent)" stroke-width="1.6"/>
+                </g>
+                <defs>
+                  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--muted)"/>
+                  </marker>
+                </defs>
+                <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="var(--ink)">
+                  <text x="20" y="50">2 weeks of setup:</text>
+                  <text x="20" y="68" fill="var(--muted)">· repo standards</text>
+                  <text x="20" y="84" fill="var(--muted)">· custom commands</text>
+                  <text x="20" y="100" fill="var(--muted)">· verification loops</text>
+                  <text x="248" y="72">agent executes</text>
+                  <text x="248" y="88" fill="var(--muted)">(supervised)</text>
+                  <text x="448" y="72">gates: tests,</text>
+                  <text x="448" y="88" fill="var(--muted)">review, build</text>
+                  <text x="380" y="152" fill="var(--muted)">fails → back to the agent</text>
+                  <text x="558" y="70" fill="var(--accent)">merge</text>
+                </g>
+              </svg>
+              <figcaption>Two weeks of scaffolding, then supervised agent runs against test, build, and review gates. 15 days later: 580 passing tests, zero QA bugs.</figcaption>
+            </figure>
+
+            <h2>The setup was the strategy</h2>
+            <p>Before execution I spent two weeks building the harness: standards files so the agent follows each repository's conventions instead of inventing its own; custom commands for the repetitive moves; and verification loops — test suites, build checks, review checklists — that define "correct" mechanically.</p>
+
+            <h2>The decisions that mattered</h2>
+            <p><strong>Keep a human review gate.</strong> Every change went through the same review I'd give any engineer's pull request; I budgeted for that from the start. The agent's throughput is worthless if you can't trust what merges.</p>
+            <p><strong>Put the time into scaffolding.</strong> You can't do this with one giant prompt; it only works because the infrastructure is there. When the agent has the standards, the commands, and the gates, the prompts stay short and the output stays predictable.</p>
+            <p><strong>Tests decide when it's done.</strong> 580 tests had to pass, builds had to stay green, and nothing merged on model confidence. Same principle as our content pipelines at work: nothing merges without passing the gates.</p>
+
+            <h2>How it turned out</h2>
+            <p>Fifteen work days from planning to QA handoff, one engineer, four repositories consolidated into two — and QA found zero bugs, vulnerabilities, or security hotspots. This became the template the AI Engineering Champions program teaches: put the effort into the harness before writing prompts.</p>
+
+            <p>All of it — architecture, harness, supervision, and the merges. The complete methodology, including what the agent got wrong and how the gates caught it, is in <a href="https://dev.to/aws-builders/the-setup-is-the-strategy-how-i-orchestrated-a-product-migration-with-claude-code-b92" target="_blank" rel="noopener noreferrer">the full write-up</a>.</p>
+
+            <nav class="pager" aria-label="Work stories">
+              <p><span class="label">← previous story</span><a href="ai-enablement-at-scale.html">One champion per team</a></p>
+              <p class="next"><span class="label">next story →</span><a href="standards-correlation.html">Teaching a graph to read curriculum standards</a></p>
+            </nav>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <p class="foot-h">On this site</p>
+        <p><a href="../index.html#writing">Writing</a> · <a href="../index.html#projects">Projects</a> · <a href="../index.html#work">Work</a> · <a href="../index.html#about">About</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Elsewhere</p>
+        <p><a href="https://github.com/karthiks3000" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://dev.to/karthiks3000" target="_blank" rel="noopener noreferrer">dev.to</a> · <a href="https://www.youtube.com/@karthiksubramanian290" target="_blank" rel="noopener noreferrer">YouTube</a> · <a href="https://www.linkedin.com/in/karthik-subramanian-7381b67b/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://dev.to/feed/karthiks3000" target="_blank" rel="noopener noreferrer">RSS</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Colophon</p>
+        <p>Hand-written HTML &amp; CSS. No tracking, no build step. Videos play through YouTube&#39;s privacy-enhanced player, only after you press play. © 2026 Karthik Subramanian</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#" aria-label="Back to top">↑</a>
+</body>
+</html>
